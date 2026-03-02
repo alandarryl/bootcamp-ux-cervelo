@@ -79,3 +79,16 @@ function goTo(screenId) {
         document.getElementById("profileName").innerText = "Utilisateur : " + user;
     }
 };
+
+
+// ondboarding script
+let currentSlide = 0;
+
+function nextSlide() {
+  const slider = document.querySelector(".slider");
+  currentSlide++;
+
+  if (currentSlide > 2) currentSlide = 2;
+
+  slider.style.transform = `translateX(-${currentSlide * 100}vw)`;
+}
