@@ -3,140 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <title>Cervelo</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
     <!-- ONBOARDING -->
-<section id="onboarding" class="screen active">
 
-    <div class="slider-wrapper">
-        <div class="slider">
 
-        <!-- SLIDE 1 -->
-        <div class="slide" style="background:#E5CBFF;">
-            <img src="./assets/auth.png" class="logo top-left">
-            <img src="./assets/auth.png" class="logo bottom-right">
+    <section id="onboarding" >
 
-            <div class="bottom-content">
-            <h1>Bienvenue sur Cervelo</h1>
-            <p>Étudie plus intelligemment grâce à des résumés et quiz interactifs.</p>
+        <!-- first slide -->
 
-            <button onclick="nextSlide()">Suivant</button>
-            <button class="skip-btn" onclick="goTo('auth')">Skip</button>
+        <div class="first-slide slide">
 
-            <div class="dots">
-                <span class="dot active-dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
+
+        <div class="top-part">
+
+            <div class="top-left-img logo-img" >
+                <img src="./assets/onboarding1.png" alt="">
             </div>
+
+            <div class="text">
+                <h1>Bienvenue sur Cervelo ! </h1>
+                <p>Tes cours deviennent ton terrain de jeu. Apprends plus vite, stresse moins.</p>
             </div>
+
+            <div class="bottom-right-img logo-img">
+                <img src="./assets/onboarding2.png" alt="">
+            </div>
+
         </div>
+        
 
-        <!-- SLIDE 2 -->
-        <div class="slide" style="background:#C8D5FF;">
-            <img src="img/mascot3.png" class="logo top-right">
+        <div class="bottom-part">
 
-            <div class="bottom-content">
-            <h1>Résumé par IA</h1>
-            <p>Dépose ton document et reçois un résumé clair avec exemples simples.</p>
+            <a>suivant</a>
+            <span class="skip" >Skip</span>
 
-            <button onclick="nextSlide()">Suivant</button>
-            <button class="skip-btn" onclick="goTo('auth')">Skip</button>
-
-            <div class="dots">
-                <span class="dot"></span>
-                <span class="dot active-dot"></span>
-                <span class="dot"></span>
+            <div class="dot" >
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            </div>
-        </div>
 
-        <!-- SLIDE 3 -->
-        <div class="slide" style="background:#C8D5FF;">
-            <img src="img/mascot4.png" class="logo bottom-right">
-
-            <div class="bottom-content">
-            <h1>Teste tes connaissances</h1>
-            <p>Choisis ton niveau et améliore tes compétences.</p>
-
-            <button onclick="goTo('auth')">C'est parti !</button>
-            <button class="skip-btn" onclick="goTo('auth')">Skip</button>
-
-            <div class="dots">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot active-dot"></span>
-            </div>
-            </div>
         </div>
 
         </div>
-    </div>
 
-</section>
 
-    <!-- AUTH -->
-    <section id="auth" class="screen">
-    <h2>Connexion</h2>
-    <input type="text" id="username" placeholder="Nom">
-    <button onclick="login()">Se connecter</button>
+
+        <!-- second slide -->
+
+        <div class="second-slide slide">
+
+
+        <div class="top-part">
+
+            <div class="top-left-img logo-img" >
+                <img src="./assets/onboarding3.png" alt="">
+            </div>
+
+            <div class="text">
+                <h1>Bienvenue sur Cervelo ! </h1>
+                <p>Tes cours deviennent ton terrain de jeu. Apprends plus vite, stresse moins.</p>
+            </div>
+
+        </div>
+        
+
+        <div class="bottom-part">
+
+            <a>suivant</a>
+            <span class="skip" >Skip</span>
+
+            <div class="dot" >
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+
+        </div>
+
+
+
+        <!-- third slide -->
+
+        <div class="third-slide slide">
+
+
+        <div class="top-part">
+
+            <!-- <div class="bottom-right-img logo-img">
+                <img src="./assets/onboarding4.png" alt="">
+            </div> -->
+
+            <div class="text">
+                <h1>Bienvenue sur Cervelo ! </h1>
+                <p>Tes cours deviennent ton terrain de jeu. Apprends plus vite, stresse moins.</p>
+            </div>
+
+            <div class="bottom-right-img logo-img">
+                <img src="./assets/onboarding4.png" alt="">
+            </div>
+
+        </div>
+        
+
+        <div class="bottom-part">
+
+            <a>C'est parti !</a>
+            <span class="skip" >Skip</span>
+
+            <div class="dot" >
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+
+        </div>
+
+
+
+
     </section>
 
-    <!-- HOME -->
-    <section id="home" class="screen">
-    <div class="topbar">
-        <h2>Cervelo</h2>
-        <button onclick="goTo('profile')">👤</button>
-    </div>
-
-    <div class="card">
-        <h3>Résumé par IA</h3>
-        <input type="file" id="fileInput">
-        <button onclick="generateSummary()">Générer résumé</button>
-    </div>
-
-    <div class="card">
-        <h3>Informatique</h3>
-        <p>Bases de programmation</p>
-        <button onclick="openCourse()">Voir résumé</button>
-    </div>
-
-    <div class="bottombar">
-        <button onclick="goTo('home')">🏠</button>
-        <button onclick="goTo('profile')">👤</button>
-    </div>
-    </section>
-
-    <!-- SUMMARY -->
-    <section id="summary" class="screen">
-    <h2>Résumé du cours</h2>
-    <p id="summaryText"></p>
-    <button onclick="goTo('quiz')">Passer le quiz</button>
-    <button onclick="goTo('home')">Retour</button>
-    </section>
-
-    <!-- QUIZ -->
-    <section id="quiz" class="screen">
-    <h2>Quiz</h2>
-    <p id="question"></p>
-    <div id="answers"></div>
-    </section>
-
-    <!-- RESULT -->
-    <section id="result" class="screen">
-    <h2>Résultat</h2>
-    <p id="scoreText"></p>
-    <button onclick="goTo('home')">Retour accueil</button>
-    </section>
-
-    <!-- PROFILE -->
-    <section id="profile" class="screen">
-    <h2>Profil</h2>
-    <p id="profileName"></p>
-    <button onclick="logout()">Se déconnecter</button>
-    </section>
-
-<script src="script.js"></script>
+<script src="./js/script.js"></script>
 </body>
 </html>

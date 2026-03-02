@@ -1,172 +1,220 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f3f4f6;
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+}
 
 /* ONBOARDING */
 
-/* MOBILE FIRST */
-
-#onboarding {
-  padding: 0;
-  overflow: hidden;
+#onboarding{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
 }
 
-.slider-wrapper {
-  width: 100vw;
-  overflow: hidden;
+.slide{
+    background-color: #ffffff;
+    padding: 14px;
+    border-radius: 7px;
+
+    border-radius: 40px; /* Un arrondi plus prononcé fait plus "smartphone" *
+
+    /* L'ombre : décalage X, décalage Y, flou, étalement, couleur */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15); 
+    
+    /* Optionnel : une petite bordure fine pour simuler le contour du verre */
+    border: 8px solid #1a1a1a;
 }
 
-.slider {
-  display: flex;
-  width: 300vw;
-  transition: transform 0.4s ease;
+/* .first-slide{
+    
 }
 
-.slide {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  flex-shrink: 0;
-  overflow: hidden;
+.second-slide{
+    
 }
 
-/* LOGOS */
+.third-slide{
+    
+} */
 
-.logo {
-  position: absolute;
-  width: 120px;
+
+
+.first-slide .top-part{
+    background-color: #E5CBFF;
 }
 
-.top-left {
-  top: -20px;
-  left: -20px;
+.second-slide .top-part,
+.second-slide .bottom-part{
+    background-color: #C8D5FF;
 }
 
-.top-right {
-  top: -20px;
-  right: -20px;
+.third-slide .top-part,
+.third-slide .bottom-part{
+    background-color: #F2FAAA;
 }
 
-.bottom-right {
-  bottom: -20px;
-  right: -20px;
+.top-part{
+    padding: 50px;
+    margin-bottom: 40px;
+    border-radius: 17px;
+    width: 400px;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
 }
 
-/* BOTTOM WHITE PANEL */
-
-.bottom-content {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: white;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  padding: 30px 20px 40px 20px;
-  text-align: center;
+.top-part .text{
+    margin-top: 100px;
 }
 
-.bottom-content h1 {
-  font-size: 22px;
-  margin-bottom: 10px;
-  color: #1A1A1A;
+
+.bottom-part{
+    background-color: #E5CBFF;
+    padding: 30px;
+    border-radius: 17px;
+    display: flex;
+    width: 400px;
+    height: 161px;
+    flex-direction: column;
+    align-items: center;
 }
 
-.bottom-content p {
-  font-size: 14px;
-  margin-bottom: 20px;
-  color: #1A1A1A;
+.bottom-part span{
+    text-align: center;
+    margin-bottom: 12px;
 }
 
-.bottom-content button {
-  width: 100%;
-  padding: 12px;
-  border-radius: 12px;
-  border: none;
-  margin-bottom: 10px;
-  font-weight: bold;
-  background: #1A1A1A;
-  color: white;
+.bottom-part span:hover{
+    cursor: pointer;
 }
 
-.skip-btn {
-  background: transparent;
-  color: #1A1A1A;
-  font-weight: normal;
+.dot span{
+    border-radius: 50%;
+    background-color: #1A1A1A;
+    height: 7px;
+    width: 7px;
+    margin: 5px;
+    display: inline-block;
 }
 
-/* DOTS */
 
-.dots {
-  margin-top: 15px;
+.first-slide .dot span:nth-child(2) {
+    background-color: #22222247;
+}
+.first-slide .dot span:nth-child(3) {
+    background-color: #22222247;
+}
+.second-slide .dot span:nth-child(3) {
+    background-color: #22222247;
 }
 
-.dot {
-  height: 6px;
-  width: 6px;
-  margin: 0 4px;
-  background: #1A1A1A33;
-  display: inline-block;
-  border-radius: 50%;
+.bottom-part a{
+    text-align: center;
+    background-color: #1A1A1A;
+    color: #ffffff;
+    border: none;
+    border-radius: 14px;
+    padding: 14px 40px 14px 40px;
+    min-width: 290px;
+    margin-bottom: 14px;
 }
 
-.active-dot {
-  background: #1A1A1A;
-}
-/* next section */
-
-.screen {
-  display: none;
-  padding: 20px;
-  min-height: 100vh;
+.bottom-part a:hover{
+    cursor: pointer;
 }
 
-.active {
-  display: block;
+/* image logo style */
+
+.logo-img{
+    width: 290px;
 }
 
-h1, h2 {
-  text-align: center;
+.first-slide .top-left-img{
+    position: absolute;
+    top: -70px;
+    left: -70px;
+    /* background-color: aqua; */
 }
 
-button {
-  padding: 10px 15px;
-  border: none;
-  background: #3B82F6;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-top: 10px;
+.first-slide .bottom-right-img{
+    position: absolute;
+    top: 320px;
+    left: 200px;
+    /* background-color: aqua; */
 }
 
-input {
-  padding: 10px;
-  width: 100%;
-  margin-top: 10px;
+.second-slide .top-left-img{
+    position: absolute;
+    top: -20px;
+    left: 150px;
+    /* background-color: aqua; */
 }
 
-.card {
-  background: white;
-  padding: 15px;
-  border-radius: 12px;
-  margin-top: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+.third-slide .bottom-right-img{
+    position: absolute;
+    top: 320px;
+    left: 190px;
+    /* background-color: aqua; */
 }
 
-.topbar, .bottombar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.logo-img img{
+    width: 100%;
 }
 
-.bottombar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: white;
-  padding: 10px;
-  box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+
+/* --- MODIFICATIONS RESPONSIVE --- */
+
+.top-part, .bottom-part {
+    /* Au lieu de width fixe, on dit : prends 90% de l'écran, 
+       mais ne dépasse jamais 400px */
+    width: 90vw; 
+    max-width: 400px;
 }
+
+.top-part {
+    padding: 30px; /* Réduit un peu pour gagner de la place */
+    height: 60vh;  /* Hauteur relative à l'écran */
+    min-height: 400px;
+}
+
+.bottom-part {
+    height: auto; /* Laisse le contenu définir la hauteur */
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Ajustement du bouton pour qu'il ne soit pas plus large que son parent */
+.bottom-part a {
+    min-width: unset;
+    width: 100%;
+    max-width: 290px;
+}
+
+/* Media Query pour les tout petits écrans (iPhone SE, etc.) */
+@media (max-width: 380px) {
+    .top-part h1 {
+        font-size: 1.2rem;
+    }
+    .top-part {
+        padding: 20px;
+    }
+    /* On ajuste les images pour qu'elles ne sortent pas trop */
+    .first-slide .bottom-right-img {
+        left: 100px; 
+        top: 380px;
+    }
+}
+
