@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Cervelo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ONBOARDING -->
+    <section id="onboarding" class="screen active">
+    <h1>Cervelo</h1>
+    <p>📚 Étudie plus intelligemment</p>
+    <button onclick="goTo('auth')">Commencer</button>
+    </section>
+
+    <!-- AUTH -->
+    <section id="auth" class="screen">
+    <h2>Connexion</h2>
+    <input type="text" id="username" placeholder="Nom">
+    <button onclick="login()">Se connecter</button>
+    </section>
+
+    <!-- HOME -->
+    <section id="home" class="screen">
+    <div class="topbar">
+        <h2>Cervelo</h2>
+        <button onclick="goTo('profile')">👤</button>
+    </div>
+
+    <div class="card">
+        <h3>Résumé par IA</h3>
+        <input type="file" id="fileInput">
+        <button onclick="generateSummary()">Générer résumé</button>
+    </div>
+
+    <div class="card">
+        <h3>Informatique</h3>
+        <p>Bases de programmation</p>
+        <button onclick="openCourse()">Voir résumé</button>
+    </div>
+
+    <div class="bottombar">
+        <button onclick="goTo('home')">🏠</button>
+        <button onclick="goTo('profile')">👤</button>
+    </div>
+    </section>
+
+    <!-- SUMMARY -->
+    <section id="summary" class="screen">
+    <h2>Résumé du cours</h2>
+    <p id="summaryText"></p>
+    <button onclick="goTo('quiz')">Passer le quiz</button>
+    <button onclick="goTo('home')">Retour</button>
+    </section>
+
+    <!-- QUIZ -->
+    <section id="quiz" class="screen">
+    <h2>Quiz</h2>
+    <p id="question"></p>
+    <div id="answers"></div>
+    </section>
+
+    <!-- RESULT -->
+    <section id="result" class="screen">
+    <h2>Résultat</h2>
+    <p id="scoreText"></p>
+    <button onclick="goTo('home')">Retour accueil</button>
+    </section>
+
+    <!-- PROFILE -->
+    <section id="profile" class="screen">
+    <h2>Profil</h2>
+    <p id="profileName"></p>
+    <button onclick="logout()">Se déconnecter</button>
+    </section>
+
+<script src="script.js"></script>
+</body>
+</html>
